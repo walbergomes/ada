@@ -3,6 +3,7 @@ import { Navbar } from "./components/Navbar/Navbar";
 
 import "./styles/App.css";
 import { Article } from "./components/Article/Article";
+import { Counter } from "./components/Counter/Counter";
 
 // Componente em classe é uma classe que herda a classe Component do React,
 // e retorna HTML dentro do método render.
@@ -18,7 +19,9 @@ class App extends React.Component {
       <>
         <Navbar />
 
-        <section id="articles">
+        <Counter />
+
+        {/* <section id="articles">
           <Article 
             title="Designing Dashboards" 
             provider="NASA"
@@ -46,7 +49,7 @@ class App extends React.Component {
             description="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
             thumbnail={article1}
           />
-        </section>
+        </section> */}
       </>
     );
   }
