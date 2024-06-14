@@ -17,6 +17,8 @@ export class Counter extends React.Component {
   // atualmente, essa função substitui a de cima
   componentDidMount() {
     console.log("O componente foi montado ✅");
+
+    document.addEventListener("scroll", this.consoleScroll)
   }
 
   // método chamado sempre que uma prop ou estado for atualizado
@@ -35,6 +37,16 @@ export class Counter extends React.Component {
 
   componentDidUpdate() {
     console.log("O componente foi atualizado ✅")
+  }
+
+  componentWillUnmount() {
+    console.log("O componente será desmonstado...")
+
+    document.removeEventListener("scroll", this.consoleScroll)
+  }
+
+  consoleScroll() {
+    console.log("Rolando a página...")
   }
 
   render() {
